@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>页面演示</title>
+		
+		<link rel="stylesheet" href="css/jquery.fullPage.css" />
+		<link rel="stylesheet" href="css/pagestyle.css" />
+		
+		<script src="js/jquery-2.1.1.min.js"></script>
+		<script src="js/jquery.fullPage.js"></script>
+		
+		<script>
+			$(document).ready(function() {
+				$('#GC').fullpage({
+					'verticalCentered': true,
+					'navigation': true,
+					'sectionsColor': ['#000000', '#000000', '#000000'],
+					'css3': true,
+					
+					
+					'afterLoad': function(anchorLink, index) {
+						if(index === 2) {
+							$('#section2 #img1, #section2 #img2').addClass('active');
+						}
+						if(index === 3) {
+							$('.chart-bar').addClass('active');
+						}
+					}
+				});
+			});
+		</script>
+	</head>
+	<body>
+		<!-- 以下是完成顶端菜单的内容 -->
+		<div class="top">
+			<div class="menu">
+				<h1 class="logo"><a href="https://www.nvidia.cn"></a></h1>
+				<ul class="nav">
+					<li><a href="javascript:">驱动程序</a></li>	
+					<li><a href="javascript:">产品</a></li>
+					<li><a href="javascript:">体验区</a></li>
+					<li><a href="javascript:">关于Nvidia</a></li>
+				</ul>
+			</div>
+		</div>
+		
+		<!-- 以下是完成滚动页面的内容 -->
+		<div id="GC">
+			<!-- 第一屏的内容 !-->
+			<div class="section" id="section1">
+				<div class="bk-img">
+					<img src="image/1.jpg" />
+				</div>
+				<div class="container">
+					<div class="text1">GEFORCE GTX 1080Ti</div>
+					<div class="text2">"十"分震撼</div>
+					<div class="text3">
+						GeForce® GTX 1080 Ti 是 NVIDIA 基于 <a href="#">NVIDIA Pascal™ </a>架构研发的全新旗舰版游戏 GPU。
+						此显卡是这一性能超凡的游戏平台的最新成员，
+						不仅拥有极致游戏性能和新一代11GB的GDDR5X显存，并且显存速率高达11Gbps。
+					</div>
+					<div class="link">
+						<a href="#" id="link-button"><img src="image/link.JPG"/></a>
+					</div>
+				</div>			
+			</div>
+			
+			<div class="section" id="section2">
+				<div class="container">
+					<h1 class="title1"><strong>NVIDIA PASCAL</strong></h1>
+					<p class="title2">同级别中更为先进的 GPU 架构</p>
+					<p class="text1">
+						GeForce GTX 10 系列显卡采用 Pascal 架构，
+						性能最高可达上一代显卡的 3 倍，而且还提供<br />创新的游戏技术和突破性 VR 体验。
+					</p>
+					<ul>
+						<li>高达<br /><strong>3倍</strong><br />更快的性能</li>
+						<li>较新的<br /><strong>游戏</strong><br />技术</li>
+						<li>新一代<br /><strong>虚拟现实</strong><br />游戏体验</li>
+					</ul>
+					<div id="img1">
+						<img src="image/card1.JPG" />
+					</div>
+					<div id="img2">
+						<img src="image/card2.JPG" />
+					</div>
+				</div>
+			</div>
+			
+			<div class="section" id="section3">
+				<div class="container">
+					<h1 class="sub-title">性能</h1>
+					<p>GeForce GTX 1080 Ti 显卡带给您惊人的速度和能效。</p>
+					<div id="chart1" class="chart-labname">
+						<div class="chart-labels">
+							<div class="chart-label">全境封锁</div>
+							<div class="chart-label">质量效应：仙女座</div>
+							<div class="chart-label">虚拟现实</div>
+						</div>
+						<div class="chart-inner">
+							<div class="chart-lines">
+								<div class="chart-line vertical-line"></div>
+								<div class="chart-line vertical-line"></div>
+								<div class="chart-line vertical-line"></div>
+							</div>
+							<div class="chart-bars">
+								<div id="bar1" class="chart-bar bar-type1"></div>
+								<div id="bar2" class="chart-bar bar-type2"></div>
+								<div id="bar3" class="chart-bar bar-type1"></div>
+								<div id="bar4" class="chart-bar bar-type2"></div>
+								<div id="bar5" class="chart-bar bar-type1"></div>
+								<div id="bar6" class="chart-bar bar-type2"></div>
+							</div>
+						</div>
+						<div class="chart-numbers">
+							<span class="chart-number">1倍</span>
+							<span class="chart-number">2倍</span>
+							<span class="chart-number">3倍</span>
+						</div>
+						<div class="chart-card-container">
+							<div class="chart-card-left">
+								<span class="chart-card-key switch1"></span>
+								<span class="chart-card-txt">Geforce GTX 980</span>
+							</div>
+							<div class="chart-card-right">
+								<span class="chart-card-key switch2"></span>
+								<span class="chart-card-txt">Geforce GTX 1080</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="section" id="section4">
+				<div class="container">
+					<h1 class="gg-title">规格</h1>
+					<h1 class="mz-title">GEFORCE GTX 1080 Ti<br />的强大功能</h1>
+					<div class="table-container">
+						<div class="table-row">
+							<div class="table-cell-header">显卡名称</div>
+							<div class="table-cell-header">Geforce GTX 1080 Ti</div>
+							<div class="table-cell-header">Geforce GTX 980 Ti</div>
+						</div>
+						<div class="table-row">
+							<div class="table-cell">GPU架构</div>
+							<div class="table-cell">Pascal</div>
+							<div class="table-cell">Maxwell</div>
+						</div>
+						<div class="table-row">
+							<div class="table-cell">显存</div>
+							<div class="table-cell">11 GB GDDR5X</div>
+							<div class="table-cell">6 GB GDDR5</div>
+						</div>
+						<div class="table-row">
+							<div class="table-cell">显存速率</div>
+							<div class="table-cell">11Gbps</div>
+							<div class="table-cell">7Gbps</div>
+						</div>
+						<div class="table-row">
+							<div class="table-cell">加速频率</div>
+							<div class="table-cell">1582Mhz</div>
+							<div class="table-cell">1075Mhz</div>
+						</div>
+					</div>
+					<div class="cs-link">
+						<a href="#">查看完整规格</a>
+					</div>
+				</div>
+			</div>
+			<div class="section" id="section5">
+				<div class="card-img">
+					<img src="image/geforce_gtx_1080ti_3qtr_front_left.png" id="img-card"/>
+					<img src="image/vr-ready-logo.png" id="img-vr" />
+				</div>
+				<div class="buy-container">
+					<div class="buy-title">强大的GTX 1080 Ti，你是否已经心动</div>
+					<div class="buy-button">
+						<a href="#">立即购买</a>
+					</div>
+				</div>
+				<div class="bottom-part">
+					<div class="footer-one">
+						<h1>关注我们</h1>
+						<img src="image/qr_nvidia.jpg" width="100px" height="100px"/>
+					</div>
+					<div class="footer-two">
+						<p>注册Geforce时事通讯</p>
+						<a href="#">订阅</a>
+					</div>
+					<div class="footer-three">
+						<img src="image/logo.JPG" />
+						<ul>
+							<li>版权 © 2017 NVIDIA 公司 |</li>
+							<li><a href="#">法律事宜</a></li>
+							<li>|</li>
+							<li><a href="#">隐私声明</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

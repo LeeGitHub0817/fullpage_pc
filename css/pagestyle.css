@@ -1,0 +1,551 @@
+* {
+	margin: 0px;
+	padding: 0px;
+}
+ul {
+	list-style-type: none;
+}
+.top {
+	position: fixed;
+	left: 0px;
+	right: 0px;
+	top: 0px;
+	z-index: 20;
+	height: 61px;
+	background-color: rgb(0, 0, 0);
+}
+.menu {
+	width: 1000px;
+	margin: 0px auto;
+	overflow: hidden;
+	/*background-color: red;*/
+}
+.logo {
+	float: left;
+	margin-top: 0px;
+	height: 61px;
+	/*background-color: green;*/
+}
+.logo a {
+	display: inline-block;
+	width: 158px;
+	height: 61px;
+	background-image: url(../image/logo.JPG);
+	background-size: 158px 61px;
+}
+.nav {
+	float: right;
+	margin-top: 15px;
+	font-size: 0px;
+}
+.nav li {
+	display: inline-block;
+	margin-left: 40px;
+	padding-left: 10px;
+}
+.nav a {
+	display: inline-block;
+	height: 30px;
+	line-height: 30px;
+	font-size: 15px;
+	color: #ffffff;
+	text-decoration: none;
+}
+.nav a:hover {
+	color: #70bd00;
+}
+
+.section {
+	background-repeat: no-repeat;
+	background-position: 50% 50%;
+	background-size: cover;
+	overflow: hidden;
+}
+/*** 第一屏的样式设置 ***/
+#section1 .container {
+	width: 800px;
+}
+#section1 .bk-img {
+	float: right;
+}
+#section1 .text1 {
+	color: #70bd00;
+	font-family: "arial narrow";
+	font-size: 50px;
+}
+#section1 .text2 {
+	color: #ffffff;
+	font-size: 35px;
+}
+#section1 .text3 {
+	position: relative;
+	color: #ffffff;
+	font-size: 15px;
+	top: 25px;
+}
+#section1 a {
+	color: #70bd00;
+}
+#section1 a:hover {
+	color: #ffffff;
+}
+#section1 .link {
+	position: relative;
+	top: 120px;
+}
+#section1 .container {
+	position: relative;
+	left: 100px;
+}
+
+/*** 第二屏的样式设置 ***/
+#section2 {
+	background-image: url(../image/foot-bk.jpg);
+	background-position: bottom;
+	background-size: auto;
+}
+#section2 .container {
+	position: relative;
+	/*background-color: aqua;*/
+	text-align: center;
+	font-family: "arial black" "微软雅黑";
+}
+#section2 .title1 {
+	color: #70bd00;
+	font-size: 60px;
+}
+#section2 .title2 {
+	color: #ffffff;
+	font-size: 40px;
+}
+#section2 .text1 {
+	position: relative;
+	color: #ffffff;
+	font-size: 15px;
+	top: 40px;
+}
+#section2 li {
+	position: relative;
+	display: inline-block;
+	color: #ffffff;
+	padding-left: 60px;
+	top: 100px;
+}
+#section2 li strong {
+	font-size: 40px;
+}
+#section2 #img1 {
+	visibility: hidden;
+}
+#section2 #img2 {
+	visibility: hidden;
+}
+#section2 #img1.active {
+	position: absolute;
+	z-index: 20;
+	bottom: -50px;
+	left: 0px;
+	visibility: visible;
+	animation: 1s move1 both;
+}
+#section2 #img2.active {
+	position: absolute;
+	z-index: 10;
+	bottom: -50px;
+	left: 72%;
+	visibility: visible;
+	animation: 1s move2 both;
+}
+@keyframes move1{
+	from{left: -526px;}
+	to{left: 0px;}
+}
+@keyframes move2{
+	from{left: 100%;}
+	to{left: 72%;}
+}
+
+/*** 第三屏的样式设置 ***/
+#section3 {
+	background-image: url(../image/gtx-1080-ti-perf-bg.jpg);
+	background-size: auto;
+}
+#section3 .container {
+	position: absolute;
+	width: 50%;
+	height: 65%;
+	bottom: 15%;
+	left: 25%;
+	/*background-color: aquamarine;*/
+}
+#section3 .sub-title {
+	position: absolute;
+	font-size: 30px;
+	color: #ffffff;
+	top: 30px;
+	left: 43%;
+}
+#section3 .container p {
+	position: absolute;
+	text-align: center;
+	font-size: 15px;
+	color: #ffffff;
+	top: 80px;
+	left: 30%;
+}
+#chart1 .chart-labels {
+	position: absolute;
+	/*background-color: blanchedalmond;*/
+	top: 120px;
+	width: 30%;
+	height: 310px;
+}
+#chart1 .chart-label {
+	color: #ffffff;
+	padding-top: 40px;
+	padding-bottom: 40px;
+	text-align: right;
+}
+#chart1 .chart-inner {
+	position: absolute;
+	height: 310px;
+	width: 65%;
+	/*background-color: aqua;*/
+	border-style:solid ;
+	border-top: none;
+	border-right: none;
+	border-bottom: thin solid #FFFFFF;
+	border-left: thin solid #FFFFFF;
+	top: 120px;
+	left: 30%;
+}
+#chart1 .chart-lines {
+	position: absolute;
+	width: 100%;
+	height: 310px;
+	text-align: left;
+}
+.vertical-line {
+	border-left: thin solid #747474;
+}
+#chart1 .chart-line {
+	margin-left: 25%;
+	position: relative;
+	width: 1px;
+	height: 100%;
+	text-align: left;
+	display: inline-block;
+}
+#chart1 .chart-bars {
+	position: absolute;
+	width: 100%;
+	float: left;
+	/*background-color: darksalmon;*/
+	top: 15px;
+}
+
+.bar-type1 {
+	background-color: #606060;
+	margin-top: 10px;
+	margin-bottom: 7px;
+	width: 0px;
+}
+.bar-type2 {
+	background-color: #76b900;
+	margin-bottom: 20px;
+	width: 0px;
+}
+.chart-bar {
+	height: 20px;
+}
+
+/***bar1样式设置***/
+#bar1.active {
+	position: absolute;
+	width: 25%;
+	transition: width 0.8s ease-out;
+}
+/***bar2样式设置***/
+#bar2.active {
+	top: 40px;
+	position: absolute;
+	width: 60%;
+	transition: width 0.8s ease-out 0.3s;
+}
+/***bar3样式设置***/
+#bar3.active {
+	position: absolute;
+	width: 25%;
+	top: 105px;
+		transition: width 0.8s ease-out 0.6s;
+}
+/***bar4样式设置***/
+#bar4.active {
+	position: absolute;
+	top: 145px;
+	width: 56%;
+	transition: width 0.8s ease-out 0.9s;	
+}
+/***bar5样式设置***/
+#bar5.active {
+	position: absolute;
+	top: 205px;
+	width: 25%;
+	transition: width 0.8s ease-out 1.2s;
+}
+/***bar6样式设置***/
+#bar6.active {
+	position: absolute;
+	top: 245px;
+	width: 95%;
+	transition: width 0.8s ease-out 1.5s;
+}
+/***倍数样式设置***/
+#chart1 .chart-numbers {
+	position: relative;
+	top: 425px;
+	left: 32%;
+}
+.chart-numbers {
+	color: #ffffff;
+	display: inline-block;
+	z-index: 10;
+	float: left;
+	width: 70%;
+	height: 20px;
+	overflow: hidden;
+}
+.chart-number {
+	position: relative;
+	margin-left: 20%;
+	font-size: 12px;
+	text-align: center;
+	vertical-align: middle;
+	font-weight: normal;
+}
+/***显卡类别样式设置***/
+#chart1 .chart-card-container {
+	position: relative;
+	width: 300px;
+	height: 30px;
+	font-size: 12px;
+	padding: 5px;
+	text-align: center;
+	margin: 0px auto;
+	top: 470px;
+	left: 100px;
+	color: #ffffff;
+	/*background-color: cornflowerblue;*/
+}
+.chart-card-left {
+	position: absolute;
+	left: 10px;
+	top: 15px;
+	display: inline-block;
+}
+.chart-card-right {
+	position: absolute;
+	right: 10px;
+	top: 15px;
+	display: inline-block;
+}
+.chart-card-key {
+	position: relative;
+	width: 20px;
+	height: 20px;
+	top: 5px;
+	display: inline-block;
+}
+.switch1 {
+	background-color: #606060;
+}
+.switch2 {
+	background-color: #70BD00;
+}
+
+/*** 第四屏的样式设置 ***/
+#section4 {
+	background-image: url(../image/specs-background.jpg);
+	background-size: cover;
+}
+#section4 .container {
+	height: 100%;
+	width: 80%;
+	/*background-color: #70BD00;*/
+	text-align: center;
+	margin: 0px auto;
+}
+.gg-title {
+	position: relative;
+	top: 150px;
+	/*background-color: #606060;*/
+	font-family: "微软雅黑";
+	color: #ffffff;
+}
+.mz-title {
+	position: relative;
+	top: 200px;
+	/*background-color: #606060;*/
+	font-family: "arial narrow";
+	font-size: 50px;
+	color: #70BD00;
+}
+.table-container {
+	position: relative;
+	text-align: left;
+	display: table;
+	/*background-color: antiquewhite;*/
+	width: 50%;
+	height: 300px;
+	margin: 0px auto;
+	top: 290px;
+	left: 100px;
+	
+}
+.table-row {
+	display: table-row;
+}
+.table-cell-header {
+	display: table-cell;
+	color: #70BD00;
+}
+.table-cell {
+	display: table-cell;
+	color: #ffffff;
+}
+.cs-link {
+	position: relative;
+	z-index: 11;
+	left: 200px;
+	top: 350px;
+}
+.cs-link a {
+	color: #70BD00;
+	text-decoration: none;
+	font-size: 16px;
+}
+.cs-link a:hover {
+	color: #FFFFFF;
+}
+
+/*** 第五屏的样式设置 ***/
+#section5 {
+	background-color: #000000;
+}
+.card-img {
+	position: relative;
+	float: right;
+	right: 100px;
+	/*background-color: aqua;*/
+	width: 550px;
+}
+#img-vr {
+	position: relative;
+	float: right;
+	bottom: 80px;
+}
+.buy-container {
+	position: relative;
+	left: 80px;
+	width: 50%;
+	/*background-color: bisque;*/
+}
+.buy-title {
+	color: #70BD00;
+	font-size: 60px;
+}
+.buy-button a {
+	position: relative;
+	text-decoration: none;
+	color: #FFFFFF;
+	display: inline-block;
+	background-color: #70BD00;
+	border-width: 10px;
+	padding: 15px 25px 10px;
+	top: 20px;
+}
+.bottom-part {
+	position: relative;
+	width: 100%;
+	height: 250px;
+	/*background-color: cadetblue;*/
+	/*z-index: 20;*/
+	bottom: -270px;
+	border-top-style: solid;
+	border-top-color: #70BD00;
+	border-top-width: 3px;	
+}
+.footer-one {
+	display: inline-block;
+	width: 50%;
+	/*background-color: antiquewhite;*/
+}
+.footer-one h1 {
+	position: relative;
+	color: #70BD00;
+	left: 100px;
+}
+.footer-one img {
+	position: relative;
+	left: 100px;
+}
+.footer-two {
+	position: relative;
+	display: inline-block;
+	width: 50%;
+	height: 145px;
+	/*background-color: blueviolet;*/
+	text-align: right;
+	left: 50%;
+	bottom: 145px;
+}
+.footer-two p {
+	position: relative;
+	font-size: 40px;
+	color: #76B900;
+	right: 100px;
+}
+.footer-two a {
+	position: relative;
+	background-color: #76B900;
+	color: #FFFFFF;
+	padding: 15px 15px;
+	right: 100px;
+	top: 35px;
+	text-decoration: none;
+}
+.footer-three {
+	position: relative;
+	z-index: 5;
+	width: 100%;
+	height: 100px;
+	/*background-color: chocolate;*/
+	bottom: 145px;
+	/*left: 25%;*/
+	text-align: center;
+}
+.footer-three ul {
+	position: relative;
+	list-style-type: none;
+	top: 5px;
+	color: #FFFFFF;
+}
+.footer-three ul li {
+	display: inline-block;
+}
+.footer-three ul li a {
+	text-decoration: none;
+}
+.footer-three ul li a:hover {
+	color: #70BD00;
+}
+#fp-nav ul li a.active span {
+	background-color: #fff;
+}
+#fp-nav ul li a span {
+	border-color: #fff;
+}
+#fp-nav ul li .fp-tooltip {
+	color: #fff;
+}
+
